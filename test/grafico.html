@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .data-column {
+            flex: 1;
+            padding: 20px;
+        }
+
+        #graph {
+            flex: 1;
+            margin: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="data-column">
+            <!-- Datos a mano izquierda -->
+            <h2>Datos Paciente</h2>
+            <p>Insulina: Valores de referencia (1.9 - 15.0)</p>
+            <p>Glucosa: Valores de referencia (70 - 99)</p>
+            <!-- Agrega más datos según sea necesario -->
+        </div>
+        <canvas id="graph" width="400" height="300"></canvas>
+    </div>
+</body>
+<script>
+    let miCanvas = document.getElementById("graph").getContext("2d");
+
+    var chart = new Chart(miCanvas, {
+        type: "bar",
+        data: {
+            labels: ["Glucosa", "Insulina"],
+            datasets: [{
+                label: "Resultados Paciente",
+                backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)", "rgb(255, 205, 86)"],
+                data: [103, 7.2]
+            }]
+        }
+    });
+</script>
+</html>
