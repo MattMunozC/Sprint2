@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f6fc; /* Azul claro para el fondo */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Envolver elementos si el espacio es insuficiente */
+    justify-content: space-between; /* Distribuir elementos uniformemente */
+    margin: 20px auto;
+    max-width: 1200px; /* Ancho máximo del contenedor */
+}
+
+.input-section, .table-section {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+input[type="date"] {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc; /* Borde gris claro */
+    padding: 8px;
+}
+
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuir gráficos uniformemente */
+    margin-top: 20px;
+}
+
+.line-chart, .bar-chart {
+    width: calc(50% - 20px); /* Ancho ajustado para tener margen entre gráficos */
+    min-width: 500px; /* Tamaño mínimo para evitar que los gráficos sean demasiado pequeños */
+    max-width: 800px; /* Tamaño máximo para evitar que los gráficos sean demasiado grandes */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
