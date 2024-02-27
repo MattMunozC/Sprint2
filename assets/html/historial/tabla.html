@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Exámenes</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <h1>Historial de Exámenes</h1>
+
+    <div class="container">
+        <div class="input-section">
+            <h2>Ingreso de Datos</h2>
+            <label for="exam-type">Tipo de Examen:</label>
+            <select id="exam-type">
+                <option value="hemograma">Hemograma</option>
+                <option value="perfil-lipidico">Perfil Lipídico</option>
+                <!-- Agregar más opciones de exámenes aquí -->
+            </select>
+
+            <label for="exam-date">Fecha del Examen:</label>
+            <input type="date" id="exam-date">
+
+            <!-- Otros campos para ingresar datos del examen según el tipo -->
+
+            <button onclick="agregarExamen()">Agregar Examen</button>
+        </div>
+
+        <div class="charts">
+            <div class="chart-row">
+                <div class="line-chart" id="line-chart-1">
+                    <!-- Gráfico de línea 1 -->
+                    <canvas id="line-chart-1-canvas"></canvas>
+                </div>
+                <div class="line-chart" id="line-chart-2">
+                    <!-- Gráfico de línea 2 -->
+                    <canvas id="line-chart-2-canvas"></canvas>
+                </div>
+            </div>
+            <div class="chart-row">
+                <div class="bar-chart" id="bar-chart-1">
+                    <!-- Gráfico de barra 1 -->
+                    <canvas id="bar-chart-1-canvas"></canvas>
+                </div>
+                <div class="bar-chart" id="bar-chart-2">
+                    <!-- Gráfico de barra 2 -->
+                    <canvas id="bar-chart-2-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-section">
+        <h2>Tabla de Historial</h2>
+        <table id="exam-table">
+            <!-- Aquí se generará dinámicamente la tabla -->
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="anim.js"></script>
+</body>
+</html>
